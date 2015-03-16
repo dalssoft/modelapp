@@ -1,4 +1,3 @@
-/server/lib-cov
 *.seed
 *.log
 *.csv
@@ -6,17 +5,6 @@
 *.out
 *.pid
 *.gz
-
-/mvc/server/pids
-/mvc/server/logs
-/mvc/server/results
-/mvc/server/build
-/mvc/server/node_modules
-
-/mvc/client/node_modules
-/mvc/client/public/script/
-/mvc/client/bower_components/
-
 
 /business/pids
 /business/logs
