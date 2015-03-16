@@ -9,7 +9,7 @@ describe('User Login:', function() {
 
   describe('When user try to login', function() {
 
-    it('should create a session for a valid email and password', function(done) {
+    it('should create a new session for a valid user email and password', function(done) {
 
       //Given
       var email = "valid@email.com";
@@ -24,8 +24,18 @@ describe('User Login:', function() {
         return Repo;
       })();
 
+      var sessionRepo = (function() {
+        function Repo () {}
+        Repo.prototype.create = function(userId, sessionId) {
+          return new Promise(function (resolve, reject) {
+            resolve(sessionId)
+          });
+        }
+        return Repo;
+      })();
+
       //When
-      var userLogin = new UserLogin({userRepo: userRepo});
+      var userLogin = new UserLogin({userRepo: userRepo, sessionRepo: sessionRepo});
 
       userLogin.execute(email, password)
       .then(function(session){
