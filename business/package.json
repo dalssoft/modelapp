@@ -1,0 +1,16 @@
+{
+  "name": "business",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "export NODE_ENV=test; set -e; ./node_modules/mocha/bin/mocha --reporter spec $(find -name '*.test.js')"
+  },
+  "dependencies": {
+    "bluebird": "^2.9.14"
+  },
+  "devDependencies": {
+    "mocha": "latest",
+    "expect.js": "latest"
+  }
+}
