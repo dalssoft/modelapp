@@ -39,7 +39,9 @@ First, create a simple application (with enough complexity) using vanilla JavaSc
       │            Mocks, etc.)            │
       └────────────────────────────────────┘
 
-After that we can start experimenting by refactoring the current code and extracting possible small helpers, modules, etc.
+After that we can start experimenting by refactoring the current code and extracting possible small helpers, modules, etc. 
+
+These helpers and modules should work with the current project struct, classes, etc., but should be possible to extend it to other structures.
 
 ## Assumptions
 
